@@ -92,7 +92,7 @@ public class RecommenderSystem {
     }
 
     // method printing the similarity matrix of users
-    public void printSimilarityMatrix(){
+    private void printSimilarityMatrix(){
         System.out.println("*** Similarity matrix ***");
         for (int i = 0; i < nbUsers ; i++) {
             System.out.println("\n");
@@ -104,7 +104,7 @@ public class RecommenderSystem {
 
     // Utility function to get the missing indexes of a user vector
     // missingIndexes.contains(i) users.get(i) <=> == -1
-    public ArrayList<Integer> getMissingIndexes(ArrayList<Float> vector1){
+    private ArrayList<Integer> getMissingIndexes(ArrayList<Float> vector1){
         ArrayList<Integer> missingIndexes = new ArrayList<Integer>();
         for (int i = 0; i < vector1.size(); i++) {
             if(vector1.get(i)==-1){
