@@ -1,0 +1,34 @@
+RecommenderSystem class: This class stores the generated users and contains methods related to recommendation systems
+
+	public void generateData(int nbUsers, int nbItems, float sparsity) 
+
+		Generates random data of users rating movies they watched
+
+	public double computeSimilarity(ArrayList<Float> vector1, ArrayList<Float> vector2)
+		
+		Returns the similarity between two users using the cosine similarity method
+
+	private void printSimilarityMatrix()
+
+		Prints the similarity matrix of users
+
+	public ArrayList<Integer> getMissingIndexes(ArrayList<Float> vector1)
+
+		returns which movies haven't been rated by a user
+
+	public ArrayList<Float> returnPredictedUser(int index)
+		
+		returns he user with predicted ratings on movies he hasn't watched
+		using the collaborative filtering method.
+		We compute the similarity between users and do a weighted average
+		with the similarity on missing ratings with other users's ratings.
+
+	public List<Entry> getTopRecommendation(int index, int limit)
+	
+		returns a ranking of movies that the user is likely to enjoy
+		and how much he should enjoy them
+
+Entry class: This method stores a movie id and a rating, we used this method to be able to sort our collection in the topN method in RecommenderSystem class, that's why it implements Comparable.
+
+
+
